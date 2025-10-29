@@ -1,4 +1,4 @@
-/** Demonstration of Object operations with minimal notes (Breaking Bad themed). */
+/** Demonstration of Object operations and their complexities (Breaking Bad themed). */
 const object = {
   heisenberg: "Walter White",
   jesse: "Jesse Pinkman",

@@ -1,4 +1,4 @@
-/** Demonstration of Set operations with minimal notes (Breaking Bad themed). */
+/** Demonstration of Set operations and their complexities (Breaking Bad themed). */
 const set = new Set(["Walter", "Jesse", "Saul"]);
 
 // Add — O(1)
