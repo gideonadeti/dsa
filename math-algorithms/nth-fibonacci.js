@@ -35,12 +35,12 @@ const nthFibonacci = (n) => {
  * Time Complexity: O(2^n)
  * Space Complexity: O(n) due to recursion stack
  */
-const nthFibonacciRecursive = (n) => {
+const recursiveNthFibonacci = (n) => {
   if (!Number.isInteger(n) || n < 0) {
     throw new Error("Input must be a positive integer");
   }
 
   if (n === 0 || n === 1) return n;
 
-  return nthFibonacciRecursive(n - 1) + nthFibonacciRecursive(n - 2);
+  return recursiveNthFibonacci(n - 1) + recursiveNthFibonacci(n - 2);
 };
