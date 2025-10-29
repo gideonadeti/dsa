@@ -224,3 +224,5 @@ class LinkedListWithTail {
     console.log(result.join(" → "));
   }
 }
+
+export default LinkedListWithTail;
