@@ -1,5 +1,5 @@
 /**
- * Demonstrates a Queue (FIFO - First In, First Out) using an array.
+ * Demonstrates a Queue (FIFO - First In First Out) using an array.
  * Common operations: enqueue, dequeue, front, isEmpty, size.
  */
 class Queue {
@@ -17,7 +17,7 @@ class Queue {
     return this.items.shift(); // shifting requires re-indexing
   }
 
-  // Front (view first element) - O(1)
+  // Front (view first item) - O(1)
   front() {
     return this.items[0];
   }
@@ -37,7 +37,7 @@ class Queue {
     this.items = [];
   }
 
-  // Print elements - O(n)
+  // Print items - O(n)
   print() {
     console.log(this.items.join(" ← "));
   }
