@@ -84,6 +84,57 @@ Examples:
 
 If a file exports functions or classes, you can also import them into your own scripts using `require` or `import` depending on your Node.js setup.
 
+## Quick testing with console.log
+
+You can add small `console.log` examples to any file (or a scratch script) to see outputs quickly.
+
+Example inside an algorithm file:
+
+```js
+// At the bottom of sorting-algorithms/merge-sort.js
+// const sorted = mergeSort([3, 1, 4, 1, 5, 9]);
+// console.log(sorted); // [1, 1, 3, 4, 5, 9]
+```
+
+Or create a separate script and import the implementation:
+
+```js
+// scratch.js
+const { mergeSort } = require('./sorting-algorithms/merge-sort');
+console.log(mergeSort([3, 1, 4, 1, 5, 9]));
+```
+
+Run it with:
+
+```bash
+node scratch.js
+```
+
+Tip: Prefer keeping examples commented in the library files, or use a separate `scratch.js` so the modules remain import-friendly.
+
+## Troubleshooting
+
+- If you see `SyntaxError` related to `import`/`export`, use `require` in CommonJS or enable ESM (e.g., add `"type": "module"` in `package.json` or rename files to `.mjs`).
+- Ensure you are running a recent Node.js version (LTS recommended).
+- If path imports fail, double-check relative paths from your script's location.
+- For infinite loops or long runs, add small inputs first and use `console.time`/`console.timeEnd` to profile.
+
+If you find a bug:
+
+- Open an issue with reproduction steps, Node.js version, and the exact input used.
+- Include a short code snippet or the `console.log` you tried.
+
+## Contributing
+
+Contributions are welcome!
+
+- Fork the repo and create a feature branch.
+- Keep implementations clear and pedagogical; add brief usage examples as comments or in `scratch.js`.
+- Run your examples with Node to verify behavior.
+- Open a PR with a concise description of the change and rationale.
+
+If you find this helpful, consider starring the repository. It helps others discover it.
+
 ## Goals
 
 - Prioritize clarity and pedagogy over micro-optimizations
