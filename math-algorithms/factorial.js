@@ -30,12 +30,12 @@ const factorial = (n) => {
  * Time Complexity: O(n)
  * Space Complexity: O(n) due to recursion stack
  */
-const factorialRecursive = (n) => {
+const recursiveFactorial = (n) => {
   if (n < 0) {
     throw new Error("Input must be a positive integer");
   }
 
   if (n === 0 || n === 1) return 1;
 
-  return n * factorialRecursive(n - 1);
+  return n * recursiveFactorial(n - 1);
 };
