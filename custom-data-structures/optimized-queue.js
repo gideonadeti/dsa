@@ -1,5 +1,5 @@
 /**
- * Demonstrates a Queue (FIFO - First In, First Out) using an object.
+ * Demonstrates a Queue (FIFO - First In First Out) using an object.
  * Both enqueue and dequeue are O(1).
  * Common operations: enqueue, dequeue, peek, isEmpty, size, clear, print.
  */
@@ -29,8 +29,8 @@ class Queue {
     return value;
   }
 
-  // Front (view first element) - O(1)
-  front() {
+  // Peek (view first item) - O(1)
+  peek() {
     if (this.isEmpty()) return null;
 
     return this.items[this.front];
@@ -53,7 +53,7 @@ class Queue {
     this.rear = 0;
   }
 
-  // Print elements - O(n)
+  // Print items - O(n)
   print() {
     if (this.isEmpty()) {
       console.log("Queue is empty");
